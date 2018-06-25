@@ -1,0 +1,12 @@
+#container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+.carta-jogo-da-memoria > img {
+	width: 180px;
+	height: 250px;
+}
