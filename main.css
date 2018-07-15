@@ -1,12 +1,67 @@
+body {
+	background-color: #eeeeee;
+}
+
 #container {
+	box-sizing: border-box;
+	max-width: 1280px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	justify-content: space-around;
-	align-content: space-around;
+ 	align-content: space-around;
+	margin: 0 auto;
+	padding: 2%;
 }
 
-.carta-jogo-da-memoria > img {
-	width: 180px;
-	height: 250px;
+.carta-jogo-da-memoria {
+	border: 1px black dotted;
+	margin-bottom: 3%;
+	margin-right: 2%;
+	width: 112px;
+	height: 168px;
 }
+
+.carta-frente > img {
+	width: 100%;
+	display: block;
+}
+
+.carta-verso {
+	background-image: url("resources/card-back.png"); 
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.carta-frente {
+	display: none;
+}
+
+.carta-jogo-da-memoria.virado .carta-frente {
+	display: block;
+}
+/*
+@media screen and (max-width: 1050px) {
+	.carta-jogo-da-memoria {
+		margin-bottom: 3%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.carta-jogo-da-memoria {
+		margin-bottom: 4%;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.carta-jogo-da-memoria {
+		margin-bottom: 2%;
+	}
+
+}*/
+
+
