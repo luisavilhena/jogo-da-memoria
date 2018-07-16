@@ -37,6 +37,11 @@ body {
 	height: 100%;
 }
 
+.success {
+	box-sizing: border-box;
+	border: 10px solid yellow;
+}
+
 .carta-frente {
 	display: none;
 }
