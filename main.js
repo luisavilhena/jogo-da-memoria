@@ -18,8 +18,8 @@ window.onload = function() {
 		cartas[i].addEventListener("click", clickCard)
 	}
 
-
 	function clickCard() {
+
 		if(this === clicked) {
 			return;
 		}
@@ -29,6 +29,7 @@ window.onload = function() {
 		if (numberClicked>2) {
 
 			numberClicked=1;
+			// console.log(numberClicked)
 
 			for (var i=0; i<cartas.length; i++) {
 				if(cartas[i].classList.contains('success') === false) {

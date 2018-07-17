@@ -11,12 +11,13 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-around;
- 	align-content: space-around;
+ 	/*align-content: space-around;*/
 	margin: 0 auto;
 	padding: 2%;
 }
 
 .carta-jogo-da-memoria {
+	box-sizing: border-box;
 	border: 1px black dotted;
 	margin-bottom: 3%;
 	margin-right: 2%;
