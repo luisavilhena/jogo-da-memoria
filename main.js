@@ -20,31 +20,27 @@ window.onload = function() {
 
 	function clickCard() {
 
-		if(this === clicked) {
-			return;
-		}
 
 		numberClicked++;
 
 		if (numberClicked>2) {
 
 			numberClicked=1;
-			// console.log(numberClicked)
 
 			for (var i=0; i<cartas.length; i++) {
-				if(cartas[i].classList.contains('success') === false) {
+				if (cartas[i].classList.contains("success") === false) {
 					cartas[i].classList.remove("virado");
 				}
 			}
 		}
+		this.classList.add("virado")
 
-		this.classList.add("virado");
-
-		if(clicked !== null && this.className === clicked.className) {
-			this.classList.add('success');
-			clicked.classList.add('success');
+		if (clicked !== null && this.classList.value === clicked.classList.value) {
+		 	clicked.classList.add("success")
+		 	this.classList.add("success")
 		}
 
 		clicked = this;
+
 	}
 }

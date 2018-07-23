@@ -11,44 +11,57 @@ body {
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-around;
- 	/*align-content: space-around;*/
 	margin: 0 auto;
 	padding: 2%;
+
+	
 }
 
 .carta-jogo-da-memoria {
+	position: relative;
 	box-sizing: border-box;
-	border: 1px black dotted;
 	margin-bottom: 3%;
 	margin-right: 2%;
 	width: 112px;
 	height: 168px;
+	perspective: 1000px;
+}
+
+.carta-frente, .carta-verso {
+	position: absolute;
+	box-shadow: 4px 4px 4px #8CCFB3;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+  backface-visibility: hidden;
 }
 
 .carta-frente > img {
 	width: 100%;
 	display: block;
+	
 }
 
 .carta-verso {
 	background-image: url("resources/card-back.png"); 
 	background-repeat: no-repeat;
 	background-size: contain;
-	width: 100%;
-	height: 100%;
-}
-
-.success {
-	box-sizing: border-box;
-	border: 10px solid yellow;
 }
 
 .carta-frente {
-	display: none;
+	transform: rotate3d(0, 1, 0, -180deg);
 }
 
 .carta-jogo-da-memoria.virado .carta-frente {
-	display: block;
+	transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.carta-jogo-da-memoria.virado .carta-verso {
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.success {
+	border: solid black  10px;
 }
 /*
 @media screen and (max-width: 1050px) {
