@@ -9,15 +9,13 @@ body {
 	background-image: url("resources/cards/bg-header.jpg");
 	background-size: cover;
 	background-repeat: repeat;
-	overflow-y: scroll;
-	scroll-behavior: smooth;
 }
 
 #header h1 {
 	padding-top: 30px;
 	font-size: 70px;
 	text-align: center;
-	color: #8CCFB3
+	color: #8CCFB3;
 }
 
 #header p {
@@ -33,71 +31,17 @@ body {
 }
 
 #header img {
-	width: 80px;
-	height: 80px;
+	width: 40px;
+	height: 60px;
 }
 
-#container {
-/*	scroll-behavior: smooth;*/
-	box-sizing: border-box;
-	max-width: 1280px;
-	width: 100%;
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: space-around;
-	margin: 0 auto;
-	padding: 2%;
+#header img:hover {
+  background-color: #8CCFB3;
+  border: 1px solid #8CCFB3;
+  border-radius: 4px;
 }
 
-.carta-jogo-da-memoria {
-	position: relative;
-	box-sizing: border-box;
-	margin-bottom: 3%;
-	margin-right: 2%;
-	width: 112px;
-	height: 168px;
-	perspective: 1000px;
-}
 
-.carta-frente, .carta-verso {
-	position: absolute;
-	box-shadow: 4px 4px 4px #8CCFB3;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-out;
-  backface-visibility: hidden;
-}
-
-.carta-frente > img {
-	width: 100%;
-	display: block;
-	
-}
-
-.carta-verso {
-	background-image: url("resources/card-back.png"); 
-	background-repeat: no-repeat;
-	background-size: contain;
-}
-
-.carta-frente {
-	transform: rotate3d(0, 1, 0, -180deg);
-}
-
-.carta-jogo-da-memoria.virado .carta-frente {
-	transform: rotate3d(0, 1, 0, 0deg);
-}
-
-.carta-jogo-da-memoria.virado .carta-verso {
-	transform: rotate3d(0, 1, 0, 180deg);
-}
-
-.success {
-	border: solid black  10px;
-}
 /*
 @media screen and (max-width: 1050px) {
 	.carta-jogo-da-memoria {

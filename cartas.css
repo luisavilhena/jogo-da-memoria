@@ -1,0 +1,110 @@
+body {
+  background-color: white;
+  user-select: none;
+}
+#container {
+/*  scroll-behavior: smooth;*/
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 2%;
+}
+.control-buttons {
+  display: flex;
+  justify-content: center;
+}
+.button-style {
+  margin-top: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  -moz-border-image: url(borda.png) 14 16 16 14 round;
+  -webkit-border-image: url(borda.png) 14 16 16 14 round;
+  -o-border-image: url(borda.png) 14 16 14 14 round;
+  border-image: url(borda.png) 14 16 14 14 round;
+  color: black;
+}
+
+.button-style:hover {
+  background-color: #8CCFB3;
+   border-width: 5px 5px 5px 5px;
+  -moz-border-image: url(borda.png) 14 16 16 14 round;
+  -webkit-border-image: url(borda.png) 14 16 16 14 round;
+  -o-border-image: url(borda.png) 14 16 14 14 round;
+  border-image: url(borda.png) 14 16 14 14 round;
+  color: white;
+}
+
+.carta-jogo-da-memoria {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 3%;
+  margin-right: 2%;
+  width: 112px;
+  height: 168px;
+  perspective: 1000px;
+}
+
+.carta-frente, .carta-verso {
+  position: absolute;
+  box-shadow: 4px 4px 4px white;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+  backface-visibility: hidden;
+}
+
+.carta-frente > img {
+  width: 100%;
+  display: block;
+  user-select: none;
+  
+}
+
+.carta-verso {
+  background-image: url("resources/card-back.png"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.carta-frente {
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.carta-jogo-da-memoria.turn .carta-frente {
+  transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.carta-jogo-da-memoria.turn .carta-verso {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.carta-frente, .carta-verso .success {
+ box-shadow: none
+}
+.success {
+border-style: solid;
+border-width: 5px 5px 0px 5px;
+-moz-border-image: url(borda.png) 14 16 0 14 round;
+-webkit-border-image: url(borda.png) 14 16 0 14 round;
+-o-border-image: url(borda.png) 14 16 0 14 round;
+border-image: url(borda.png) 14 16 0 14 round;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
