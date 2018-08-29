@@ -2,6 +2,7 @@ body {
   background-color: black;
   user-select: none;
 }
+
 #container {
 /*  scroll-behavior: smooth;*/
   box-sizing: border-box;
@@ -19,35 +20,6 @@ body {
 .control-buttons {
   display: flex;
   justify-content: center;
-}
-.button-style {
-  margin-top: 20px;
-  font-family: 'Rajdhani', sans-serif;
-  background-color: black;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 3px;
-
-  border-style: solid;
-  border-width: 48px 15px 0px 4px;
-  -moz-border-image: url(border-5.png) 48 15 0 4 round;
-  -webkit-border-image: url(border-5.png) 48 15 0 4 round;
-  -o-border-image: url(border-5.png) 48 15 0 4 round;
-  border-image: url(border-5.png) 48 15 0 4 fill round;
-  
-  color: white;
-}
-
-.button-style:hover {
-  border-style: solid;
-  border-width: 48px 15px 0px 4px;
-  -moz-border-image: url(border-5.png) 48 15 0 4 round;
-  -webkit-border-image: url(border-5.png) 48 15 0 4 round;
-  -o-border-image: url(border-5.png) 48 15 0 4 round;
-  border-image: url(border-5.png) 48 15 0 4 fill round;
-  color: #8CCFB3;
 }
 
 .carta-jogo-da-memoria {
@@ -98,6 +70,38 @@ body {
 .carta-frente, .carta-verso .success {
  box-shadow: none
 }
+
+.disabled {
+  pointer-events: none;
+}
+
+
+.button-style {
+  margin-top: 20px;
+  font-family: 'Rajdhani', sans-serif;
+
+  background-color: black;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+
+  border-style: solid;
+  border-width: 48px 15px 0px 4px;
+  -moz-border-image: url(border-5.png) 48 15 0 4 round;
+  -webkit-border-image: url(border-5.png) 48 15 0 4 round;
+  -o-border-image: url(border-5.png) 48 15 0 4 round;
+  border-image: url(border-5.png) 48 15 0 4 fill round;
+  
+  color: white;
+}
+
+.button-style:hover {
+  color: #8CCFB3;
+}
+
+
 .success {
 border-style: solid;
 border-width: 20px 1px 0px 0px;
@@ -105,9 +109,8 @@ border-width: 20px 1px 0px 0px;
 -webkit-border-image: url(border-2.png) 20 1 0 0 repeat;
 -o-border-image: url(border-2.png) 20 1 0 0 repeat;
 border-image: url(border-2.png) 20 1 0 0 fill repeat;
+
 }
 
-.disabled {
-  pointer-events: none;
-}
+
 
