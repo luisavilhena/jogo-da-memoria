@@ -55,6 +55,7 @@ function setUp() {
     handleResetButtonClick()
   })
 
+
   resetShuffleButton.addEventListener('click', handleResetButtonClick)
 
   function handleResetButtonClick () {
@@ -66,21 +67,6 @@ function setUp() {
     clicked = null;
   }
 
-  // embaralharButton.addEventListener('click', function(){
-  //   for (var i=0; i<cards.length; i++) {
-  //     var targetPosition = getRandomInt(0, 24)
-  //     var currentCard = cards[i]
-  //     var targetCard = cards[targetPosition]
-  //     currentCard.parentNode.insertBefore(currentCard, targetCard)
-
-  //     console.log('current')
-  //     console.log(cards[i])
-  //     console.log('target')
-  //     console.log(cards[targetPosition])
-
-    
-  //   }
-  // })
   
 
   for (var i=0; i<cards.length; i++) {
@@ -118,6 +104,57 @@ function setUp() {
     clicked = this;
 
   }
+
+    //animar as cartas
+
+
+
+  // function computeCardDistance(source, card) {
+  //    var sourceDimensions = source.getBoundingClientRect()
+  //    var cardDimensions = card.getBoundingClientRect()
+
+  //    return {
+  //      x: sourceDimensions.x - cardDimensions.x,
+  //      y: sourceDimensions.y - cardDimensions.y
+  //    }
+  //  }
+
+  //  var controlButtons = {
+  //   animate: document.getElementById('animate')
+  // }
+  
+  //  function getRandomInt(min, max) {
+  //    min = Math.ceil(min);
+  //    max = Math.floor(max);
+  //    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  //  }
+
+  // function animateCardsBackToDeck() {
+  //   var allCards = container.querySelectorAll('.carta-jogo-da-memoria')
+
+  //   for (var i = 0; i < allCards.length; i++) {
+  //     var distance = computeCardDistance(allCards[0], allCards[i])
+
+  //     var transform = 'transform: translate(' + distance.x + 'px, ' + distance.y + 'px) rotate(360deg);'
+  //     var transitionDuration = 'transition-duration: ' + getRandomInt(600, 2000) + 'ms;'
+
+  //     allCards[i].style = transform + transitionDuration
+  //   }
+  // }
+
+  // function animateCardsToPosition() {
+  //   var allCards = container.querySelectorAll('.carta-jogo-da-memoria')
+
+  //   for (var i = 0; i < allCards.length; i++) {
+  //     var transform = 'transform: translate(0, 0) rotate(0);'
+  //     var transitionDuration = 'transition-duration: ' + getRandomInt(600, 2000) + 'ms;'
+
+  //     allCards[i].style = transform + transitionDuration
+  //   }
+  // }
+
+  // controlButtons.animate.addEventListener('click', animateCardsBackToDeck)
+
 }
 
 window.onload = setUp;

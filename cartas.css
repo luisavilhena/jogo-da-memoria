@@ -18,7 +18,10 @@ body {
   padding: 2%;
 }
 .control-buttons {
+  margin-top: 20px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -41,7 +44,7 @@ body {
   backface-visibility: hidden;
 }
 
-.carta-frente > img {
+.carta-frente  img {
   width: 100%;
   display: block;
   user-select: none;
@@ -77,24 +80,31 @@ body {
 
 
 .button-style {
+  margin-bottom: 40px;s
   margin-top: 20px;
   font-family: 'Rajdhani', sans-serif;
 
   background-color: black;
-  padding: 10px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 2px;
 
-  border-style: solid;
+/*  border-style: solid;
   border-width: 48px 15px 0px 4px;
   -moz-border-image: url(border-5.png) 48 15 0 4 round;
   -webkit-border-image: url(border-5.png) 48 15 0 4 round;
   -o-border-image: url(border-5.png) 48 15 0 4 round;
-  border-image: url(border-5.png) 48 15 0 4 fill round;
+  border-image: url(border-5.png) 48 15 0 4 fill round;*/
   
   color: white;
+}
+
+.control-buttons img {
+  width: 75px;
+  height: 60px;
+  margin-bottom: 5px;
 }
 
 .button-style:hover {
@@ -103,12 +113,13 @@ body {
 
 
 .success {
-border-style: solid;
-border-width: 20px 1px 0px 0px;
--moz-border-image: url(border-2.png) 20 1 0 0 repeat;
--webkit-border-image: url(border-2.png) 20 1 0 0 repeat;
--o-border-image: url(border-2.png) 20 1 0 0 repeat;
-border-image: url(border-2.png) 20 1 0 0 fill repeat;
+  margin-top: -20px;
+  border-style: solid;
+  border-width: 20px 1px 0px 0px;
+  -moz-border-image: url(border-2.png) 20 1 0 0 repeat;
+  -webkit-border-image: url(border-2.png) 20 1 0 0 repeat;
+  -o-border-image: url(border-2.png) 20 1 0 0 repeat;
+  border-image: url(border-2.png) 20 1 0 0 fill repeat;
 
 }
 
